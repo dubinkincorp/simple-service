@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-service-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: simple-service-app
+  template:
+    metadata:
+      labels:
+        app: simple-service-app
+    spec:
+      containers:
+        - name: simple-service
+          image: dubinkincorp/simple-service:latest
+          ports:
+            - name: web
+              containerPort: 80
