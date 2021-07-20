@@ -4,7 +4,7 @@ metadata:
   name: simple-service-ingress
   annotations:
     kubernetes.io/ingress.class: "nginx"
-    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/rewrite-target: /$2-$3
 spec:
   rules:
     - host: arch.homework
