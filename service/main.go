@@ -10,7 +10,7 @@ func main() {
 	fmt.Println("Start server")
 
 	http.HandleFunc("/health/", handler)
-	http.ListenAndServe(":8000", nil)
+	http.ListenAndServe(":80", nil)
 }
 
 type Status struct {
