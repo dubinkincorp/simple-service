@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: simple-service-ingress
+  name: simple-ingress
   annotations:
     kubernetes.io/ingress.class: "nginx"
     nginx.ingress.kubernetes.io/rewrite-target: /$2-$3
@@ -12,5 +12,5 @@ spec:
         paths:
           - path: /otusapp/sabina($|/)(.*)
             backend:
-              serviceName: simple-service-service
+              serviceName: simple-service
               servicePort: 8000
